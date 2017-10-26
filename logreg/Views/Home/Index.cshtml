@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Welcome";
+}
+@model logreg.Models.User
+<h1>Register</h1>
+<p>@ViewBag.regerr</p>
+<form asp-controller="Home" asp-action="Register" method="post">
+    <label>First Name</label>
+    <input asp-for="regdetails.fname"/>
+    <span asp-validation-for="regdetails.fname"></span>
+    <label>Last Name</label>
+    <input asp-for="regdetails.lname"/>
+    <span asp-validation-for="regdetails.lname"></span>
+    <label>Email</label>
+    <input asp-for="regdetails.email"/>
+    <span asp-validation-for="regdetails.email"></span>
+    <label>Password</label>
+    <input asp-for="regdetails.pw"/>
+    <span asp-validation-for="regdetails.pw"></span>
+    <label>Confirm Password</label>
+    <input asp-for="regdetails.cpw"/>
+    <span asp-validation-for="regdetails.cpw"></span>
+    <input type="submit" value="Register">
+</form>
+
+
+<h1>Login</h1>
+<p>@ViewBag.logerr</p>
+<form asp-controller="Home" asp-action="Login" method="post">
+    <label>Email</label>
+    <input asp-for="logdetails.email"/>
+    <span asp-validation-for="logdetails.email"></span>
+    <label>Password</label>
+    <input asp-for="logdetails.pw"/>
+    <span asp-validation-for="logdetails.pw"></span>
+    <input type="submit" value="Log In">
+</form>
